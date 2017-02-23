@@ -1,4 +1,4 @@
-var LifeObj = function(posX, posY, sizeX, sizeY, moveSpeed, color) {
+var Cell = function(posX, posY, sizeX, sizeY, moveSpeed, color) {
   this.x = posX;
   this.y = posY;
   this.width = sizeX;

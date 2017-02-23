@@ -7,6 +7,30 @@ function fps(val) {
   return 1000 / val;
 }
 
+function random(lower, upper) {
+  var rndNum = Math.floor(Math.random() * upper),
+      offSet = Math.floor(Math.random() * 2); // 50/50 chance at adding one extra digit.
+
+
+  while(rndNum < lower) {
+    rndNum = Math.floor(Math.random() * upper)
+
+    if(lower >= upper) {
+      break;
+    }
+  }
+
+  if(rndNum >= lower) {
+    if(offSet === 0) {
+      return rndNum;
+    } else {
+      return rndNum + 1;
+    }
+  }
+
+  return lower;
+}
+
 function doesCollide(objOne, objTwo) {
   if((objOne.x + objOne.width >= objTwo.x && objOne.x <= objTwo.x + objTwo.width) &&
      (objOne.y + objOne.height >= objTwo.y && objOne.y <= objTwo.y + objTwo.height)) {
@@ -14,6 +38,7 @@ function doesCollide(objOne, objTwo) {
      }
 }
 
+/*
 var keyPress = {
   W: false,
   A: false,
@@ -75,3 +100,4 @@ document.onkeyup = function() {
   keyPress.LEFT = false;
   keyPress.RIGHT = false;
 }
+*/
