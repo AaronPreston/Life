@@ -1,6 +1,6 @@
 Engine.load = function() {
   cell = [];
-  cellAmount = 500;
+  cellAmount = 10;
 
   for(var x = 0; x < cellAmount; x++) {
     cell[x] = new Cell(
